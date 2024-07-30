@@ -6,7 +6,8 @@ function lookupWord(word) {
 		var url =
 			"https://www.oxfordlearnersdictionaries.com/definition/english/" +
 			encodedWord;
-		chrome.tabs.create({ url: url });
+		// chrome.tabs.create({ url: url });
+		chrome.windows.create({ url: url, type: "popup", width: 600, height: 800 });
 	}
 }
 
