@@ -15,11 +15,5 @@
 			},
 			"description": "Look up word in Oxford Dictionary"
 		}
-	},
-	"icons": {
-		"16": "icon.jpg",
-		"32": "icon.jpg",
-		"48": "icon.jpg",
-		"128": "icon.jpg"
 	}
 }
