@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Oxford Dictionary Lookup for Edge",
+	"version": "1.0",
+	"description": "Look up selected words in the Oxford Dictionary",
+	"permissions": ["activeTab", "contextMenus"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"commands": {
+		"lookup-word": {
+			"suggested_key": {
+				"default": "Ctrl+Q"
+			},
+			"description": "Look up word in Oxford Dictionary"
+		}
+	},
+	"icons": {
+		"16": "icon.jpg",
+		"32": "icon.jpg",
+		"48": "icon.jpg",
+		"128": "icon.jpg"
+	}
+}
