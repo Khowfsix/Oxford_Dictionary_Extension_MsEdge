@@ -13,7 +13,7 @@
 			"suggested_key": {
 				"default": "Ctrl+Q"
 			},
-			"description": "Look up word in Oxford Dictionary"
+			"description": "Look up dictionary or translate"
 		}
 	}
 }

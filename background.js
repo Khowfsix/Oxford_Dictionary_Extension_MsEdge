@@ -1,13 +1,28 @@
 // Function to look up a word
 function lookupWord(word) {
 	if (word) {
-		var processedWord = word.trim().toLowerCase() + "_1";
-		var encodedWord = encodeURIComponent(processedWord);
-		var url =
-			"https://www.oxfordlearnersdictionaries.com/definition/english/" +
-			encodedWord;
-		// chrome.tabs.create({ url: url });
-		chrome.windows.create({ url: url, type: "popup", width: 600, height: 800 });
+		var wordCount = word.trim().split(/\s+/).length <= 1;
+		if (!wordCount) {
+			var processedWord = word.trim().toLowerCase();
+			var encodedWord = encodeURIComponent(processedWord);
+			var url =
+				"https://translate.google.com/details?sl=en&tl=vi&op=translate&text=" +
+				encodedWord;
+			chrome.tabs.create({ url: url });
+		} else {
+			var processedWord = word.trim().toLowerCase() + "_1";
+			var encodedWord = encodeURIComponent(processedWord);
+			var url =
+				"https://www.oxfordlearnersdictionaries.com/definition/english/" +
+				encodedWord;
+			// chrome.tabs.create({ url: url });
+			chrome.windows.create({
+				url: url,
+				type: "popup",
+				width: 600,
+				height: 800,
+			});
+		}
 	}
 }
 
